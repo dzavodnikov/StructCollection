@@ -1,0 +1,2 @@
+FlatStruct
+Copyright 2025 Dmitry Zavodnikov
