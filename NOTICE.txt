@@ -1,0 +1,2 @@
+JStruct
+Copyright 2025 Dmitry Zavodnikov
