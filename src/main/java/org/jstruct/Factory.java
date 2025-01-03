@@ -46,6 +46,15 @@ public abstract class Factory<T> {
         return String.format("%s.%s_of_%s", classDef.getPackage().getName(), getStructName(), classDef.getSimpleName());
     }
 
+    protected void verifyClassDefinition(final Class<T> classDef) {
+        if (classDef == null) {
+            throw new IllegalArgumentException("Class definition parameter should not be null");
+        }
+        if (!classDef.isInterface()) {
+            throw new IllegalArgumentException("Class definition parameter should be an interface");
+        }
+    }
+
     /**
      * @param classDef describes how to data should be located into the memory;
      * @return created class implementation based on class definition.
